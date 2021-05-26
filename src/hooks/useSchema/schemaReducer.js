@@ -1,6 +1,5 @@
 import findIndex from 'lodash.findindex';
-import isEqual from 'lodash.isequal';
-import { ON_CHANGE, ON_CONNECT, ON_DISCONNECT, ON_NODE_ADD, ON_NODE_REMOVE } from './actionTypes';
+import { ON_CHANGE, ON_CONNECT, ON_NODE_ADD, ON_NODE_REMOVE } from './actionTypes';
 import getNodePortsId from '../../shared/functions/getNodePortsId';
 
 /**
@@ -45,11 +44,6 @@ const schemaReducer = (state, action) => {
       return ({
         nodes: state.nodes || [],
         links: state.links || [],
-      });
-    case ON_DISCONNECT:
-      return ({
-        nodes: state.nodes || [],
-        links: state.links.filter((link) => !isEqual(link, action.payload.link)) || [],
       });
     default:
       return state;

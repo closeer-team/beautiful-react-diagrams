@@ -130,17 +130,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.0] - 2020-11-20
 
-### Added
+  ### Added
 
-- First implementation of draggable canvas
-- First implementation of zoomable canvas 
-
-
-## [0.5.1] - 2020-11-25
-
-### Added
-
-- Added `disconnect` function exported in `useSchema` hook
+  - First implementation of draggable canvas
+  - First implementation of zoomable canvas
 
 ## [0.5.1] - 2020-11-27
 
@@ -149,11 +142,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Reverted changes in `0.5.0` related to draggable canvas and zoomable 
     canvas due to an uncaught bug. We will continue working on these features
     and release them in an upcoming version. Apologies everyone! 
-
-## [0.6.0] - 2020-12-12
-
-### Added
-
-- Canvas Component for panning and zooming
-- useCanvas hook
-- CanvasControl component

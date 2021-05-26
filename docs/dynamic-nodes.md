@@ -1,5 +1,5 @@
-```js
-import Diagram, { Canvas, createSchema, useSchema, useCanvasState, CanvasControls } from 'beautiful-react-diagrams';
+```jsx
+import Diagram, { createSchema, useSchema } from 'beautiful-react-diagrams';
 import { Button } from 'beautiful-react-ui';
 
 const initialSchema = createSchema({
@@ -31,9 +31,7 @@ const CustomRender = ({ id, content, data, inputs, outputs }) => (
 const UncontrolledDiagram = () => {
   // create diagrams schema
   const [schema, { onChange, addNode, removeNode }] = useSchema(initialSchema);
-  const [canvasStates, handlers] = useCanvasState(); // creates canvas state
-    
-
+  
   const deleteNodeFromSchema = (id) => {
     const nodeToRemove = schema.nodes.find(node => node.id === id);
     removeNode(nodeToRemove);
@@ -54,15 +52,12 @@ const UncontrolledDiagram = () => {
    };
    
    addNode(nextNode);
-  };
+  }
 
   return (
     <div style={{ height: '22.5rem' }}>
       <Button color="primary" icon="plus" onClick={addNewNode}>Add new node</Button>
-      <Canvas {...canvasStates} {...handlers}>
-        <Diagram schema={schema} onChange={onChange} />
-        <CanvasControls />
-      </Canvas>
+      <Diagram schema={schema} onChange={onChange} />
     </div>
   );
 };
