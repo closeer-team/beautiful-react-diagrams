@@ -37,14 +37,14 @@ module.exports = {
       sidebar: {
         border: 0,
         width: '16rem',
-        background: '#FBFAF9',
+        background: 'white',
         boxShadow: '0 0 20px 0 rgba(20, 20, 20, 0.1)',
       },
       content: {
-        maxWidth: '1024px',
+        maxWidth: '100%',
       },
       root: {
-        background: 'white',
+        background: '#FBFAF9',
       },
       hasSidebar: {
         paddingLeft: '16rem',

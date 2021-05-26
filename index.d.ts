@@ -1,10 +1,6 @@
-import Diagram from './@types/Diagram';
-import useSchema from './@types/useSchema';
-import createSchema from './@types/createSchema';
-import Canvas from './@types/Canvas';
-import CanvasControls from './@types/CanvasControls';
-import useCanvasState from './@types/useCanvasState';
-
+import Diagram from "./@types/Diagram";
+import useSchema from "./@types/useSchema";
+import createSchema from "./@types/createSchema";
 import {
   validateSchema,
   validatePort,
@@ -12,7 +8,7 @@ import {
   validateNodes,
   validateNode,
   validateLinks,
-} from './@types/validators';
+} from "./@types/validators";
 
 export {
   Diagram,
@@ -24,8 +20,5 @@ export {
   validateNodes,
   validateNode,
   validateLinks,
-  Canvas,
-  CanvasControls,
-  useCanvasState,
 };
 export default Diagram;

@@ -1,7 +1,6 @@
 ```js
-import Diagram, { Canvas, createSchema, useSchema, useCanvasState, CanvasControls } from 'beautiful-react-diagrams';
+import Diagram, { createSchema, useSchema } from 'beautiful-react-diagrams';
 
-// Custom Node
 const CustomNode = (props) => {
   const { inputs } = props;
   
@@ -37,19 +36,15 @@ const initialSchema = createSchema({
 });
 
 const UncontrolledDiagram = () => {
-  const [canvasState, handlers] = useCanvasState();
+  // create diagrams schema
   const [schema, { onChange }] = useSchema(initialSchema);
 
   return (
-    <div style={{ height: '30rem' }}>
-      <Canvas {...canvasState} {...handlers}>
-        <Diagram schema={schema} onChange={onChange} />
-        <CanvasControls />
-      </Canvas>
+    <div style={{ height: '22.5rem' }}>
+      <Diagram schema={schema} onChange={onChange} />
     </div>
   );
 };
 
 <UncontrolledDiagram />
-````
-
+```
